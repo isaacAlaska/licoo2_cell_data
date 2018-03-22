@@ -38,12 +38,12 @@ struct battery_model_parameters {
    where the table is indexed by battery SOC and temperature. */
 struct battery_model_table {
 #define battery_model_table_SOCs 11  /* number of entries in table by state of charge: 0.0 0.1 ... 1.0 */
-#define battery_model_table_temps 4 /* number of entries in table by temperature */
+#define battery_model_table_temps 6 /* number of entries in table by temperature */
   float values[battery_model_table_temps][battery_model_table_SOCs];
 };
 
 /* Temperature values */
-const static float battery_model_temperatures[battery_model_table_temps]={-20.0, -10.0, -5.0, +2.0};
+const static float battery_model_temperatures[battery_model_table_temps]={-20.0, -10.0, -5.0, +2.0, +12.0, +20.0};
 
 /* Open circuit voltage, Em (volts) */
 const static struct battery_model_table battery_model_Em={{
